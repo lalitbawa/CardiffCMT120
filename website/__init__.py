@@ -2,13 +2,11 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
-db = SQLAlchemy()
-DB_NAME = "database.db"
-
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'lalitbawa123'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://c22090185:Lalit12345@csmysql.cs.cf.ac.uk:3306/c22090185_database'
+db = SQLAlchemy(app)
 db.init_app(app)
 
 from .views import views
