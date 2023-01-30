@@ -1,1 +1,1 @@
-from website import create_app as application
+from website import app as application
